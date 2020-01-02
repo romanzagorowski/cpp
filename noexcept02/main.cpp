@@ -5,7 +5,7 @@
 template<typename F>
 void foo(F f)
 {
-    if(noexcept(F()))
+    if(noexcept(f()))
     {
         f();
     }
@@ -36,7 +36,7 @@ void S()
 
 int main()
 {
-    foo(T);
+    foo(S);
 
     return 0;
 }
